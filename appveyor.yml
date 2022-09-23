@@ -15,7 +15,7 @@ environment:
 
   matrix:
     - configuration: debug
-    - image: macos-bigsur
+    - image: Visual Studio 2022
       configuration: debug
 
 install:
