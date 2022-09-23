@@ -5,7 +5,7 @@ branches:
     - gh-pages
     - docs
     
-image: macos
+image: macos-monterey
 
 clone_depth: 3
 
