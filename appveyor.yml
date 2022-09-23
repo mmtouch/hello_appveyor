@@ -4,21 +4,24 @@ branches:
   except:
     - gh-pages
     - docs
-    
-image: macos-monterey
 
 clone_depth: 3
 
 environment:
-  GITHUB_NAME: mmtouch
-  
+  global:
+    GITHUB_NAME: mmtouch
+
+  matrix:
+    - image: macos-monterey
+      configuration: debug
+    - image: macos-bigsur
+      configuration: release
+
 install:
   - xcodebuild -version
-  
-configuration: debug
 
 before_build:
   - env
 
-#build_script:
-#  - tree -L 3 ${pwd}
+build_script:
+  - tree -L 3 ${pwd}
