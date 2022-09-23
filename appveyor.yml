@@ -19,7 +19,10 @@ environment:
       configuration: debug
 
 install:
-  - xcodebuild -version
+  - >-
+    if [ ${CI_MACOS} ]; then;
+      xcodebuild -version
+    fi
 
 before_build:
   - env
