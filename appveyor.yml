@@ -15,7 +15,7 @@ environment:
 
   matrix:
     - configuration: debug
-    - image: Visual Studio 2022
+    - image: Ubuntu
       configuration: debug
 
 install:
