@@ -7,15 +7,16 @@ branches:
 
 clone_depth: 3
 
+image: macos-monterey
+
 environment:
   global:
     GITHUB_NAME: mmtouch
 
   matrix:
-    - image: macos-monterey
-      configuration: debug
+    - configuration: debug
     - image: macos-bigsur
-      configuration: release
+      configuration: debug
 
 install:
   - xcodebuild -version
