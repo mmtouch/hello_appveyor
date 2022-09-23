@@ -13,14 +13,12 @@ environment:
   GITHUB_NAME: mmtouch
   
 install:
-  - brew install tree
+  - xcodebuild -version
   
-configuration:
-  - Release
-  - debug
+configuration: debug
 
 before_build:
   - env
 
-build_script:
-  - tree -L 3 ${pwd}
+#build_script:
+#  - tree -L 3 ${pwd}
